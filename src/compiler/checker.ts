@@ -19808,6 +19808,7 @@ export function createTypeChecker(host: TypeCheckerHost): TypeChecker {
     }
 
     function getTypeFromTypeNode(node: TypeNode): Type {
+        console.log('DEBUG: getTypeFromTypeNode', node.kind);
         return getConditionalFlowTypeOfType(getTypeFromTypeNodeWorker(node), node);
     }
 
